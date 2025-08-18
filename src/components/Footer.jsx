@@ -20,7 +20,7 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <div className="font-heading text-2xl font-bold text-gradient mb-4">
-                JohnDev
+                Chamath Fernando
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Full Stack Developer passionate about creating exceptional
@@ -54,9 +54,9 @@ const Footer = () => {
             <div>
               <h3 className="font-semibold text-white mb-4">Get In Touch</h3>
               <div className="space-y-2 text-muted-foreground">
-                <p>john@example.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>San Francisco, CA</p>
+                <p>chamathkaveendra@gmail.com</p>
+                <p>+94 77 473 6449</p>
+                <p>Kalutara,Panadura</p>
               </div>
 
               <div className="flex gap-4 mt-6">
@@ -76,7 +76,7 @@ const Footer = () => {
 
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} JohnDev. All rights reserved.
+              © {currentYear} Chamath Fernando. All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm flex items-center gap-1 mt-4 md:mt-0">
               Made with <Heart className="w-4 h-4 text-red-500" /> using React &

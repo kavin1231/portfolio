@@ -34,7 +34,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="font-heading text-xl font-bold text-gradient">
-            JohnDev
+            Chamath Fernando
           </div>
 
           {/* Desktop Navigation */}

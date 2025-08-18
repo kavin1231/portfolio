@@ -1,7 +1,6 @@
 // Projects.jsx
 import React from "react";
 
-
 import { ExternalLink, Github } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -9,34 +8,56 @@ import { Button } from "./ui/button";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Audiomart",
     description:
-      "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
+      "Full-stack audio equipment rental platform with role-based access, secure authentication, product listings, and admin dashboard",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      "https://images.unsplash.com/photo-1511376777868-611b54f68947?w=600&h=400&fit=crop",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Supabase",
+    ],
     github: "#",
-    demo: "#",
+    demo: "https://frontend-audioooz.vercel.app/",
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "FlyNest",
     description:
-      "Collaborative project management tool with real-time updates",
+      "Full-stack flight booking app with JWT authentication, role-based access, real-time updates, and booking management",
     image:
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    tech: ["Vue.js", "Express", "Socket.io", "PostgreSQL"],
+      "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=400&fit=crop",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Supabase",
+      "Stripe",
+    ],
     github: "#",
-    demo: "#",
+    demo: "https://fly-nest-ui.vercel.app/",
   },
   {
     id: 3,
-    title: "AI Chat Interface",
+    title: "AgroVista",
     description:
-      "Modern chat application with AI integration and real-time messaging",
+      "Platform connecting farmers, buyers, suppliers, and instructors with product listings, orders, payments, and educational resources",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    tech: ["Next.js", "OpenAI", "Prisma", "Tailwind"],
+      "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Supabase",
+    ],
     github: "#",
     demo: "#",
   },
@@ -54,8 +75,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my latest work, featuring modern web applications built
-            with cutting-edge technologies.
+            A showcase of my latest work, featuring modern web applications
+            built with cutting-edge technologies.
           </p>
         </div>
 
@@ -114,7 +135,11 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  <Button size="sm" className="flex-1 btn-cyber text-xs" asChild>
+                  <Button
+                    size="sm"
+                    className="flex-1 btn-cyber text-xs"
+                    asChild
+                  >
                     <a
                       href={project.demo}
                       target="_blank"

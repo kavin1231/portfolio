@@ -43,19 +43,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "john@example.com",
-      href: "mailto:john@example.com"
+      value: "chamathkaveendra@gmail.com",
+      href: "mailto:chamathkaveendra@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+94 77 473 6449",
       href: "tel:+15551234567"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Kalutara,Panadura",
       href: "#"
     }
   ];

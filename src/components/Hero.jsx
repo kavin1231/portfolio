@@ -1,14 +1,18 @@
 import React from "react";
 
-
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
 
 const Hero = () => {
   const handleDownloadCV = () => {
-    // Replace this with actual CV download logic (e.g., link to PDF file)
-    console.log("Downloading CV...");
+    const cvUrl = "/assets/cv/chamath-fernando.pdf"; // Replace with your actual PDF path
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "chamath-fernando.pdf"; // Filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -32,21 +36,23 @@ const Hero = () => {
       <Container className="relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Profile Image */}
-          <div className="relative mx-auto w-48 h-48 mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full animate-glow-pulse" />
-            <div className="absolute inset-2 bg-dark-200 rounded-full overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                alt="Profile"
-                className="w-full h-full object-cover"
-              />
+          <div className="mt-20">
+            <div className="relative mx-auto w-60 h-60 mb-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-pulse" />
+              <div className="absolute inset-2 bg-gray-800 rounded-full overflow-hidden border-2 border-gray-300">
+                <img
+                  src="/profile.jpg"
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
           {/* Name and Title */}
           <div className="space-y-4">
             <h1 className="font-heading text-4xl md:text-6xl lg:text-hero font-bold text-gradient-hero animate-slide-up">
-              John Developer
+              Chamath Fernando
             </h1>
             <p
               className="text-xl md:text-2xl text-muted-foreground font-medium animate-slide-up"
@@ -84,8 +90,16 @@ const Hero = () => {
             style={{ animationDelay: "0.8s" }}
           >
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
+              {
+                icon: Github,
+                href: "https://github.com/kavin1231",
+                label: "GitHub",
+              },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/chamath-fernando-74a787347/",
+                label: "LinkedIn",
+              },
               { icon: Mail, href: "#contact", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a
