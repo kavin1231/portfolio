@@ -61,12 +61,13 @@ const certificates = [
 
 const experiences = [
   {
-    role: "Full Stack Developer (Intern)",
-    company: "Tech Solutions Pvt Ltd",
-    year: "2024 - 2025",
+    role: "Logo Designer (Freelance)",
+    company: "Canva & Freelance Projects",
+    year: "2024 - Present",
     description:
-      "Worked on building MERN stack applications, implemented REST APIs, and integrated Supabase for media storage.",
+      "Created professional logos and branding materials using Canva for small businesses and personal projects.",
   },
+
   {
     role: "Freelance Web Developer",
     company: "Self-employed",
