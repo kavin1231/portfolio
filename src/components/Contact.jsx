@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-
-
-
-
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "./ui/container";
 import { Button } from "./ui/button";
@@ -18,18 +14,42 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    const formDataObj = new FormData();
+    formDataObj.append('access_key', '0644782f-a063-4890-a24c-152c416a58ca');
+    formDataObj.append('name', formData.name);
+    formDataObj.append('email', formData.email);
+    formDataObj.append('subject', formData.subject);
+    formDataObj.append('message', formData.message);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataObj
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        console.log('Email sent successfully!');
+      } else {
+        setSubmitStatus('error');
+        console.error('Form submission failed:', result);
+      }
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      // In a real app, you would send this to your backend
-    }, 1000);
+    }
   };
 
   const handleChange = (e) => {
@@ -50,7 +70,7 @@ const Contact = () => {
       icon: Phone,
       label: "Phone",
       value: "+94 77 473 6449",
-      href: "tel:+15551234567"
+      href: "tel:+94774736449"
     },
     {
       icon: MapPin,
@@ -156,6 +176,19 @@ const Contact = () => {
                   required
                 />
               </div>
+
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400">
+                  ✅ Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400">
+                  ❌ Failed to send message. Please try again or email me directly.
+                </div>
+              )}
 
               <Button
                 type="submit"
