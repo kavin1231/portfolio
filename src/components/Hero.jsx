@@ -8,9 +8,9 @@ const Hero = () => {
   const handleDownloadCV = async () => {
     try {
       // Import the PDF file as a module
-      const cvModule = await import('../assets/cv/chamath-fernando.pdf');
+      const cvModule = await import("../assets/cv/chamath-fernando.pdf");
       const cvUrl = cvModule.default;
-      
+
       const link = document.createElement("a");
       link.href = cvUrl;
       link.download = "chamath-fernando.pdf";
@@ -18,21 +18,9 @@ const Hero = () => {
       link.click();
       document.body.removeChild(link);
     } catch (error) {
-      console.error('CV file not found:', error);
-      alert('CV file is not available. Please contact the developer.');
+      console.error("CV file not found:", error);
+      alert("CV file is not available. Please contact the developer.");
     }
-  };
-
-  // Option 2: Alternative method - direct link to view/download
-  const handleViewCV = () => {
-    // This opens the PDF in a new tab instead of forcing download
-    const cvUrl = "/assets/cv/chamath-fernando.pdf";
-    window.open(cvUrl, '_blank');
-  };
-
-  // Option 3: Placeholder method until PDF is ready
-  const handleDownloadCVPlaceholder = () => {
-    alert('CV download will be available soon. Please contact me directly for my resume.');
   };
 
   return (
@@ -95,30 +83,18 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
             style={{ animationDelay: "0.6s" }}
           >
-            {/* Use one of these button options: */}
-            
-            {/* Option 1: With error handling */}
             <Button onClick={handleDownloadCV} className="btn-cyber group">
               <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
               Download CV
             </Button>
 
-            {/* Option 2: View in new tab (uncomment to use instead)
-            <Button onClick={handleViewCV} className="btn-cyber group">
-              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              View CV
-            </Button>
-            */}
-
-            {/* Option 3: Placeholder (uncomment to use instead)
-            <Button onClick={handleDownloadCVPlaceholder} className="btn-cyber group">
-              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Download CV
-            </Button>
-            */}
-
-            <Button variant="outline" className="btn-outline-cyber">
-              View Projects
+            <Button>
+              <a
+                href="#projects"
+                className="btn-outline-cyber inline-flex items-center justify-center"
+              >
+                View Projects
+              </a>
             </Button>
           </div>
 

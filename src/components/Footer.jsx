@@ -7,8 +7,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/kavin1231", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/chamath-fernando-74a787347/", label: "LinkedIn" },
     { icon: Mail, href: "#contact", label: "Email" }
   ];
 
@@ -78,10 +78,7 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               © {currentYear} Chamath Fernando. All rights reserved.
             </p>
-            <p className="text-muted-foreground text-sm flex items-center gap-1 mt-4 md:mt-0">
-              Made with <Heart className="w-4 h-4 text-red-500" /> using React &
-              Tailwind CSS
-            </p>
+            
           </div>
         </div>
       </Container>

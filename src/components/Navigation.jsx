@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "./ui/container";
 
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -21,7 +20,7 @@ const Navigation = () => {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Certificates", href: "#certificates" },
-    { label: "Contact", href: "#contact" }
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
