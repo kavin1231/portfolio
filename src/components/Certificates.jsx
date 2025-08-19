@@ -6,45 +6,57 @@ import { Container } from "./ui/container";
 const certificates = [
   {
     id: 1,
-    title: "AWS Certified Developer",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop",
-    credential: "#",
+    title: "Full Stack Developer Certification Best Award",
+    issuer: "SKYREC",
+    date: "2025",
+    image: "/MERN Certificate best award.png",
+    credential:
+      "https://certificate.skyrek.com/certifcates/completion/lX5zKJ8SG8I6",
     description:
-      "Certified in developing and maintaining applications on AWS platform",
+      "Certified in developing and maintaining applications on MERN stack with best practices",
   },
   {
     id: 2,
-    title: "Google Cloud Professional",
-    issuer: "Google Cloud Platform",
-    date: "2023",
-    image:
-      "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=300&h=200&fit=crop",
-    credential: "#",
+    title: "Full Stack Developer Certification",
+    issuer: "SKYREC",
+    date: "2025",
+    image: "/MERN Certificate.png",
+    credential:
+      "https://certificate.skyrek.com/certifcates/participation/ynlYnXz1bAWc",
     description:
-      "Professional certification for cloud architecture and development",
+      "Professional certification for MERN stack development covering MongoDB, Express, React, and Node.js",
   },
   {
     id: 3,
-    title: "React Developer Certification",
-    issuer: "Meta",
-    date: "2023",
-    image:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=300&h=200&fit=crop",
-    credential: "#",
-    description: "Advanced React development and best practices certification",
+    title: "Git Training Certification",
+    issuer: "Simplilearn",
+    date: "2025",
+    image: "/Git Training.jpg",
+    credential:
+      "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI3NTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC84MzE4Mjg5Xzg2NTExNTAxNzQ2NzA5MDgwNzEyLnBuZyIsInVzZXJuYW1lIjoiS2F2aW5kcmEgY2hhbWF0aCBmZXJuYW5kbyJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F2823%2FGIT%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1407955014728153504&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVj3As9as0inRJDkmyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAAfFUodBAAAA",
+    description:
+      "Advanced Git training covering version control, branching, merging, and collaboration",
   },
   {
     id: 4,
-    title: "Full Stack Web Development",
-    issuer: "freeCodeCamp",
-    date: "2022",
-    image:
-      "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=300&h=200&fit=crop",
-    credential: "#",
-    description: "Comprehensive full stack development certification",
+    title: "MongoDB Node.js Developer Path Certification",
+    issuer: "MongoDB",
+    date: "2025",
+    image: "/MongoDB Node.js Developer Path.jpg",
+    credential: "https://learn.mongodb.com/c/UPdOJDVSRZSbQfrzZQxFgQ",
+    description:
+      "MongoDB certification for Node.js developers covering database design, CRUD operations, and performance optimization",
+  },
+  {
+    id: 5,
+    title: "Responsive Web Design Certification",
+    issuer: "FreeCodeCamp",
+    date: "2025",
+    image: "/Responsive Web Design.jpg",
+    credential:
+      "https://www.freecodecamp.org/certification/fcc499318d5-f5c2-4534-b978-7a62b0c07456/responsive-web-design",
+    description:
+      "Responsive Web Design certification covering HTML, CSS, Flexbox, and Grid layout techniques",
   },
 ];
 

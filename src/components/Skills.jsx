@@ -8,30 +8,28 @@ const skillCategories = [
     icon: Code,
     title: "Frontend Development",
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 88 },
-      { name: "Vue.js", level: 82 },
+      { name: "React.js", level: 100 },
+      { name: "HTML", level: 100 },
+      { name: "Tailwind CSS", level: 100 },
+      { name: "CSS", level: 100 },
     ],
   },
   {
     icon: Server,
     title: "Backend Development",
     skills: [
-      { name: "Node.js", level: 92 },
-      { name: "Express", level: 88 },
+      { name: "Node.js", level: 100 },
+      { name: "Express", level: 100 },
       { name: "Python", level: 85 },
-      { name: "GraphQL", level: 78 },
+      { name: "PHP", level: 78 },
     ],
   },
   {
     icon: Database,
     title: "Database & Cloud",
     skills: [
-      { name: "MongoDB", level: 89 },
-      { name: "PostgreSQL", level: 86 },
-      { name: "AWS", level: 83 },
-      { name: "Docker", level: 80 },
+      { name: "MongoDB", level: 100 },
+      { name: "MySQL", level: 86 },
     ],
   },
   {
@@ -40,7 +38,7 @@ const skillCategories = [
     skills: [
       { name: "UI/UX Design", level: 87 },
       { name: "Figma", level: 85 },
-      { name: "Adobe XD", level: 80 },
+      { name: "Android Studio", level: 80 },
       { name: "Prototyping", level: 83 },
     ],
   },
@@ -56,8 +54,8 @@ const Skills = () => {
             Skills & Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills and areas of expertise
-            in modern web development.
+            A comprehensive overview of my technical skills and areas of
+            expertise in modern web development.
           </p>
         </div>
 
@@ -84,7 +82,9 @@ const Skills = () => {
                     key={skill.name}
                     className="animate-fade-in"
                     style={{
-                      animationDelay: `${categoryIndex * 0.2 + skillIndex * 0.1}s`,
+                      animationDelay: `${
+                        categoryIndex * 0.2 + skillIndex * 0.1
+                      }s`,
                     }}
                   >
                     <div className="flex justify-between items-center mb-2">
@@ -99,8 +99,10 @@ const Skills = () => {
                       <div
                         className="skill-progress animate-skill-fill"
                         style={{
-                          '--skill-width': `${skill.level}%`,
-                          animationDelay: `${categoryIndex * 0.5 + skillIndex * 0.2}s`,
+                          "--skill-width": `${skill.level}%`,
+                          animationDelay: `${
+                            categoryIndex * 0.5 + skillIndex * 0.2
+                          }s`,
                         }}
                       />
                     </div>
@@ -119,21 +121,23 @@ const Skills = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               "JavaScript",
-              "TypeScript",
               "React",
-              "Next.js",
-              "Vue.js",
+
+              "TypeScript",
               "Node.js",
               "Express",
               "MongoDB",
-              "PostgreSQL",
-              "AWS",
-              "Docker",
+              "MySQL",
+              "Python",
+              "PHP",
               "Git",
               "Tailwind CSS",
               "Figma",
-              "GraphQL",
+              "Android Studio",
+              "Kotlin",
               "REST APIs",
+              "HTML",
+              "CSS",
             ].map((tech, index) => (
               <span
                 key={tech}

@@ -6,31 +6,14 @@ import { Container } from "./ui/container";
 import { Button } from "./ui/button";
 
 const projects = [
+  
   {
     id: 1,
-    title: "Audiomart",
-    description:
-      "Full-stack audio equipment rental platform with role-based access, secure authentication, product listings, and admin dashboard",
-    image:
-      "https://images.unsplash.com/photo-1511376777868-611b54f68947?w=600&h=400&fit=crop",
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Tailwind CSS",
-      "Supabase",
-    ],
-    github: "#",
-    demo: "https://frontend-audioooz.vercel.app/",
-  },
-  {
-    id: 2,
     title: "FlyNest",
     description:
       "Full-stack flight booking app with JWT authentication, role-based access, real-time updates, and booking management",
     image:
-      "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=400&fit=crop",
+      "/flynest.png",
     tech: [
       "React",
       "Node.js",
@@ -44,12 +27,30 @@ const projects = [
     demo: "https://fly-nest-ui.vercel.app/",
   },
   {
+    id: 2,
+    title: "Audiomart",
+    description:
+      "Full-stack audio equipment rental platform with role-based access, secure authentication, product listings, and admin dashboard",
+    image:
+      "/audiomart.png",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Supabase",
+    ],
+    github: "#",
+    demo: "https://frontend-audioooz.vercel.app/",
+  },
+  {
     id: 3,
     title: "AgroVista",
     description:
       "Platform connecting farmers, buyers, suppliers, and instructors with product listings, orders, payments, and educational resources",
     image:
-      "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop",
+      "/agrovista.png",
     tech: [
       "React",
       "Node.js",
