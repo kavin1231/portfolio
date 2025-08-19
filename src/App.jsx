@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages.jsx";
-import NotFound from "./pages.jsx/NotFound.jsx";
+import Index from "./pages/Index.jsx";
+import NotFound from "./pages/NotFound.jsx";
 import { Toaster } from "./components/ui/toaster.jsx";
 import { TooltipProvider } from "./components/ui/tooltip.jsx";
 
