@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Award, Calendar, ExternalLink } from "lucide-react";
+import { Briefcase, Calendar, ExternalLink } from "lucide-react";
 import { Container } from "./ui/container";
 
 const certificates = [
@@ -33,7 +32,7 @@ const certificates = [
     date: "2025",
     image: "/Git Training.jpg",
     credential:
-      "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI3NTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC84MzE4Mjg5Xzg2NTExNTAxNzQ2NzA5MDgwNzEyLnBuZyIsInVzZXJuYW1lIjoiS2F2aW5kcmEgY2hhbWF0aCBmZXJuYW5kbyJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F2823%2FGIT%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1407955014728153504&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVj3As9as0inRJDkmyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAAfFUodBAAAA",
+      "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI3NTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC84MzE4Mjg5Xzg2NTExNTAxNzQ2NzA5MDgwNzEyLnBuZyIsInVzZXJuYW1lIjoiS2F2aW5kcmEgY2hhbWF0aCBmZXJuYW5kbyJ9",
     description:
       "Advanced Git training covering version control, branching, merging, and collaboration",
   },
@@ -60,26 +59,27 @@ const certificates = [
   },
 ];
 
-const achievements = [
+const experiences = [
   {
-    icon: Award,
-    title: "Tech Innovation Award",
+    role: "Full Stack Developer (Intern)",
+    company: "Tech Solutions Pvt Ltd",
+    year: "2024 - 2025",
     description:
-      "Winner of the 2024 Innovation Challenge for AI-powered web application",
-    year: "2024",
+      "Worked on building MERN stack applications, implemented REST APIs, and integrated Supabase for media storage.",
   },
   {
-    icon: Award,
-    title: "Open Source Contributor",
+    role: "Freelance Web Developer",
+    company: "Self-employed",
+    year: "2023 - Present",
     description:
-      "Active contributor to major open source projects with 100+ contributions",
-    year: "2023",
+      "Designed and developed modern websites and web apps for clients using React, Tailwind CSS, and Node.js.",
   },
   {
-    icon: Award,
-    title: "Hackathon Champion",
-    description: "First place in Global Web Development Hackathon 2023",
+    role: "Academic Project",
+    company: "Sliit University",
     year: "2023",
+    description:
+      "Developed an agricultural marketplace platform with farmer registration, product listings, and order management features.",
   },
 ];
 
@@ -92,10 +92,10 @@ const Certificates = () => {
       <Container>
         <div className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-gradient mb-6">
-            Certificates & Achievements
+            Certificates & Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Professional certifications and achievements that validate my
+            Professional certifications and industry experience that validate my
             expertise and commitment to continuous learning.
           </p>
         </div>
@@ -150,29 +150,30 @@ const Certificates = () => {
           </div>
         </div>
 
-        {/* Achievements */}
+        {/* Experience Section */}
         <div>
           <h3 className="font-heading text-2xl font-semibold text-white mb-8 text-center">
-            Key Achievements
+            Work Experience
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
+            {experiences.map((exp, index) => (
               <div
-                key={achievement.title}
+                key={exp.role}
                 className="card-cyber text-center hover-lift animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="inline-flex p-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full mb-4">
-                  <achievement.icon className="w-8 h-8 text-white" />
+                  <Briefcase className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="font-semibold text-white mb-2">
-                  {achievement.title}
-                </h4>
+                <h4 className="font-semibold text-white mb-2">{exp.role}</h4>
                 <p className="text-sm text-muted-foreground mb-3">
-                  {achievement.description}
+                  {exp.company}
+                </p>
+                <p className="text-xs text-muted-foreground mb-3">
+                  {exp.description}
                 </p>
                 <span className="inline-block px-3 py-1 bg-cyber-blue/10 text-cyber-blue text-xs font-medium rounded-full border border-cyber-blue/20">
-                  {achievement.year}
+                  {exp.year}
                 </span>
               </div>
             ))}
