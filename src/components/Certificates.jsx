@@ -57,6 +57,18 @@ const certificates = [
     description:
       "Responsive Web Design certification covering HTML, CSS, Flexbox, and Grid layout techniques",
   },
+  {
+    id: 6,
+    title:
+      "Oracle Cloud Infrastructure 2025 AI Foundatios Associate Certification",
+    issuer: "Oracle University",
+    date: "2025",
+    image: "/oracleai.jpg",
+    credential:
+      "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9A9746D8DF47CC7A1D20B89975C7AE2FA81463FEB5369B13A083BE4EC7E07F2E",
+    description:
+      "Certification in AI foundations on Oracle Cloud Infrastructure covering AI concepts, services, and applications",
+  },
 ];
 
 const experiences = [
